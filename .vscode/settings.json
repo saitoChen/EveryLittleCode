@@ -1,0 +1,70 @@
+{
+  "workbench.colorTheme": "Slack Theme Dark Mode",
+  "editor.tabSize": 2,
+  "update.enableWindowsBackgroundUpdates": true,
+  "background.customImages": ["C:/Users/chenjianfeng/Pictures/Saved Pictures/wallhaven-od86kl.jpg"],//图片的路径
+  "background.enabled": true,
+  "background.style": {
+      "content": "''",
+      "pointer-events": "none",
+      "position": "absolute",
+      "z-index": "99999",
+      "width": "100%",
+      "height": "100%",
+      "background-position": "center",
+      "background-repeat": "no-repeat",
+      "background-attachment": "fixed",
+      " background-size": "cover",
+      "opacity": 0.1
+  },
+  "files.associations": {
+      "*.wpy": "vue",
+      "*.html": "html"
+  },
+  "background.useFront": true,
+  "background.useDefault": false,
+  "files.autoSave": "onFocusChange",
+  "search.followSymlinks": false,
+  "editor.wordWrap": "on",
+  "python.autoComplete.extraPaths": [
+      "D:/work/env/python/lib/site-packages"
+  ],
+  "python.autoComplete.addBrackets": true,
+  "python.linting.pylintArgs": [
+      "----extension-pkg-whitelist=1xml"
+  ],
+  "editor.fontLigatures": null,
+  "vetur.validation.template": false,
+  "vetur.validation.script": false,
+  "vetur.validation.style": false,
+  "editor.suggestSelection": "first",
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+  "python.languageServer": "Microsoft",
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "workbench.sideBar.location": "right",
+  "workbench.startupEditor": "welcomePage",
+  "[vue]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascript]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+      "editor.defaultFormatter": "vscode.typescript-language-features"
+  },
+  "workbench.editorAssociations": {
+      "*.ipynb": "jupyter.notebook.ipynb"
+  },
+  "debug.javascript.autoAttachFilter": "onlyWithFlag",
+  "fileheader.customMade": {
+  
+  },
+  "terminal.integrated.tabs.enabled": true,
+  "git.autofetch": true,
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "editor.formatOnSave": false,
+  "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": false
+  },
+  "window.zoomLevel": 1
+}
