@@ -1,5 +1,5 @@
 export interface HeaderInterface {
-  path?: String
+  path?: String | BreadcrumbItemInterface[]
   height?: Number
 }
 
@@ -15,4 +15,9 @@ export interface ArticleInterface {
   title: String
   description: String
   content?:String
+}
+
+export interface BreadcrumbItemInterface {
+  path: String
+  name: String
 }

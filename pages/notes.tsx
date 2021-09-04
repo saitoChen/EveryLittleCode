@@ -6,13 +6,19 @@ import NotesList from '../components/Notes/NotesList'
 import Footer from '../components/Footer'
 import excuteQuery from '../lib/db'
 import { ArticleInterface, TagsInterface } from '../interface/index'
-
+import { useRouter } from 'next/router'
 interface Props {
   articles: ArticleInterface[]
   tags: TagsInterface[]
 }
 
-const Post = ({ articles, tags }: Props) => {
+const Notes = ({ articles, tags }: Props) => {
+
+  const router = useRouter()
+
+  const handleTag = (name:string) => {
+    router.push(`/notes/${name}`)
+  }
 
   return (
     <div>
@@ -20,15 +26,12 @@ const Post = ({ articles, tags }: Props) => {
         <title>✌Every Little Code</title>
       </Head>
       <div className="flex flex-col min-h-screen">
-        <Header path='notes' height={56} />
+        <Header path='/ notes' height={56} />
         <NotesNav />
         <div className="flex flex-col mb-32 flex-1 sm:flex-row sm:justify-between sm:items-start sm:mt-28 sm:px-12 lg:w-1024px lg:mx-auto lg:items-start">
           {
-            tags.length > 0 && <div className="px-6 sm:order-last"><Tags tags={tags} /></div>
+            tags.length > 0 && <div className="px-6 sm:order-last"><Tags tags={tags} handleTag={handleTag} /></div>
           }
-          {/* <div className="flex">
-          { tags.map((item) => <div key={String(item.id)}>{item.name}</div>) }
-          </div> */}
           <div className="px-6 mt-6 sm:mt-0"><NotesList articles={articles} /></div>
         </div>
         <Footer />
@@ -58,4 +61,4 @@ export async function getServerSideProps(context:any) {
   }
 }
 
-export default Post
+export default Notes

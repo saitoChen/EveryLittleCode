@@ -1,9 +1,10 @@
 import React, { useState } from 'react'
 import GithubSvg from './Icons/Github'
 import Twitter from './Icons/Twitter'
+import Breadcrumb from '../components/Breadcrumb/index'
 import { MoonIcon, SunIcon } from '@heroicons/react/solid'
 import { HeaderInterface } from '../interface/index'
-const Header = ({ path='home', height=72 }: HeaderInterface) => {
+const Header = ({ path='/ home', height=72 }: HeaderInterface) => {
 
   const [ darkModeOn, setDarkMode ] = useState(false)
 
@@ -22,9 +23,7 @@ const Header = ({ path='home', height=72 }: HeaderInterface) => {
             { darkModeOn ? <SunIcon/> : <MoonIcon /> }
           </div>
         </div>
-        <div className="mt-4 select-none sm:order-1 sm:mt-0">
-          / {path}
-        </div>
+        <Breadcrumb path={path} />
       </div>
     </React.Fragment>
   )
