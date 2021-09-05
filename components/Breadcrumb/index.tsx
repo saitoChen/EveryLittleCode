@@ -27,7 +27,7 @@ const Breadcrumb = ({ path }:Props) => {
           const length = path.length
           const isBtn = index !== path.length - 1
           return (
-            <span key={index} className={isBtn ? 'cursor-pointer text-highlight' : '' } onClick={() => handlePath(true, path, index )}>{` / ${item.name}`}</span>     
+            item.name !== 'All' && <span key={index} className={isBtn ? 'cursor-pointer text-highlight' : '' } onClick={() => handlePath(true, path, index )}>{` / ${item.name}`}</span>     
           )
         })
       }

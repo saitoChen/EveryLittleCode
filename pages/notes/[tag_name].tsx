@@ -21,6 +21,10 @@ const NotesWithTag = ({ info }: Props) => {
     router.push(`/notes/${name}`)
   }
 
+  const handleArticle = (tag_name: string) => {
+    return (id: string | number) => router.push(`/notes/${tag_name}/${id}`)
+  }
+
   const Breadcrumb:BreadcrumbItemInterface[] = [
     {
       name: 'notes',
@@ -40,11 +44,11 @@ const NotesWithTag = ({ info }: Props) => {
       <div className="flex flex-col min-h-screen">
         <Header path={Breadcrumb} height={56} />
         <NotesNav title={tag_name} />
-        <div className="flex flex-col mb-32 flex-1 sm:flex-row sm:justify-between sm:items-start sm:mt-28 sm:px-12 lg:w-1024px lg:mx-auto lg:items-start">
+        <div className="flex flex-col mb-18 flex-1 sm:flex-row sm:justify-between sm:items-start sm:mt-28 sm:px-12 lg:w-1024px lg:mx-auto lg:items-start">
           {
             tags.length > 0 && <div className="px-6 sm:order-last"><Tags tags={tags} handleTag={handleTag} /></div>
           }
-          <div className="px-6 mt-6 sm:mt-0"><NotesList articles={articles} /></div>
+          <div className="px-6 mt-6 sm:mt-0"><NotesList articles={articles}  handleArticle={handleArticle(tag_name)} /></div>
         </div>
         <Footer />
       </div>

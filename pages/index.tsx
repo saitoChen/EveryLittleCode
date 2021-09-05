@@ -8,7 +8,7 @@ const Home: NextPage = () => {
       <Head>
         <title>✌Every Little Code</title>
       </Head>
-      <Header path="home" />
+      <Header path="/ home" />
       <Content />
     </div>
   )

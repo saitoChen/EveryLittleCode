@@ -7,6 +7,11 @@ module.exports = {
         source: '/home',
         destination: '/',
         permanent: true,
+      },
+      {
+        source: '/notes/All',
+        destination: '/notes',
+        permanent: true,
       }
     ]
   },
