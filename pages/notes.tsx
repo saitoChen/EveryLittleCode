@@ -7,6 +7,7 @@ import Footer from '../components/Footer'
 import excuteQuery from '../lib/db'
 import { ArticleInterface, TagsInterface } from '../interface/index'
 import { useRouter } from 'next/router'
+import DarkContentBg from '../components/DarkContentBg'
 interface Props {
   articles: ArticleInterface[]
   tags: TagsInterface[]
@@ -37,6 +38,7 @@ const Notes = ({ articles, tags }: Props) => {
             tags.length > 0 && <div className="px-6 sm:order-last"><Tags tags={tags} handleTag={handleTag} /></div>
           }
           <div className="px-6 mt-6 sm:mt-0"><NotesList articles={articles} handleArticle={handleArticle} /></div>
+          <DarkContentBg />
         </div>
         <Footer />
       </div>

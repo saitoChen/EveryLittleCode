@@ -10,15 +10,21 @@ const Header = ({ path='/ home', height=72 }: HeaderInterface) => {
 
   const toggleDarkMode = () => {
     setDarkMode(!darkModeOn)
+    const dom = document.querySelector('html') as HTMLElement
+    if (darkModeOn) {
+      dom.classList.remove('dark')
+    } else {
+      dom.classList.add('dark')
+    }
   }
 
   return (
     <React.Fragment>
-      <div className={`w-100% h-${height} bg-block absolute top-0 -z-1`}></div>
+      <div className={`w-100% h-${height} bg-block absolute top-0 -z-1 dark:bg-dbnewblock`}></div>
       <div className="flex flex-col font-mono text-base items-center mt-4 sm:flex-row sm:justify-between sm:px-4 lg:w-1024px lg:mx-auto">
-        <div className="flex w-200px cursor-pointer fill-current justify-evenly text-highlight sm:order-last">
-          <Twitter />
-          <GithubSvg />
+        <div className="flex w-200px cursor-pointer fill-current justify-evenly text-highlight dark:text-grey sm:order-last">
+          <div className="dark:hover:text-dbase"><Twitter /></div>
+          <div className="dark:hover:text-dbase"><GithubSvg /></div>
           <div className="header-icon text-grey" onClick={ toggleDarkMode }>
             { darkModeOn ? <SunIcon/> : <MoonIcon /> }
           </div>

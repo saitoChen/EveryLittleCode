@@ -18,7 +18,7 @@ const Breadcrumb = ({ path }:Props) => {
   }
 
   return (
-    <div className="mt-4 select-none sm:order-1 sm:mt-0">
+    <div className="mt-4 select-none dark:text-dbase sm:order-1 sm:mt-0">
       {
         typeof path === 'string' && path
       }
@@ -27,7 +27,7 @@ const Breadcrumb = ({ path }:Props) => {
           const length = path.length
           const isBtn = index !== path.length - 1
           return (
-            item.name !== 'All' && <span key={index} className={isBtn ? 'cursor-pointer text-highlight' : '' } onClick={() => handlePath(true, path, index )}>{` / ${item.name}`}</span>     
+            item.name !== 'All' && <span key={index} className={isBtn ? 'cursor-pointer text-highlight dark:text-dbase dark:hover:text-highlight' : ''  } onClick={() => handlePath(true, path, index )}>{` / ${item.name}`}</span>     
           )
         })
       }

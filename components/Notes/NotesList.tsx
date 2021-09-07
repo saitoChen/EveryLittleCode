@@ -12,9 +12,9 @@ const NotesList = ({ articles, handleArticle }: Props) => {
         articles.map((item:ArticleInterface) => {
           return (
             <li key={String(item.article_id)} className="mb-6 break-all">
-              <div className="text-title text-lg font-semibold leading-3 cursor-pointer sm:hover:underline" onClick={() => handleArticle(item.article_id)}>{item.title}</div>
-              <div className="text-notes-grey text-xs mt-4">{format(item.createdAt)}</div>
-              <div className="text-notes text-sm mt-4">{item.description}</div>
+              <div className="text-title dark:text-dbase dark:hover:text-title sm:dark:hover:text-highlight text-lg font-semibold leading-3 cursor-pointer sm:hover:underline" onClick={() => handleArticle(item.article_id)}>{item.title}</div>
+              <div className="text-notes-grey dark:text-dbase text-xs mt-4">{format(item.createdAt)}</div>
+              <div className="text-notes dark:text-dbase text-sm mt-4">{item.description}</div>
             </li>
           )
         })
