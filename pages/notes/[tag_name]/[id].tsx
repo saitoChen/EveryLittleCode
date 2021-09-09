@@ -1,7 +1,6 @@
 import Header from '../../../components/Header'
 import Head from 'next/head'
 import excuteQuery from '../../../lib/db'
-import NotesNav from '../../../components/Notes/Nav'
 import { ArticleInterface, TagsInterface } from '../../../interface/index'
 import Article from '../../../components/Article/index'
 import Footer from '../../../components/Footer'
@@ -35,9 +34,8 @@ const NotesItem = ( { info }:Props ) => {
       <Head>
         <title>✌Every Little Code</title>
       </Head>
-      <div className="flex flex-col mb-18 min-h-screen font-mono text-base">
-        <Header path={Breadcrumb} height={56} />
-        <NotesNav title={article.title} />
+      <div className="flex flex-col mb-12 min-h-screen font-mono text-base">
+        <Header path={Breadcrumb} height={56} title={article.title} />
         <div className="flex-1"><Article article={article} /></div>
         <Footer />
       </div>

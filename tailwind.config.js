@@ -5,7 +5,8 @@ module.exports = {
     extend: {
       zIndex: {
         '-1': '-1',
-        '-2': '-2'
+        '-2': '-2',
+        '1': '1'
        }
     },
     gradientColorStops: theme => ({

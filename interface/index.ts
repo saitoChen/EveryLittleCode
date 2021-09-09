@@ -1,6 +1,7 @@
 export interface HeaderInterface {
   path?: String | BreadcrumbItemInterface[]
-  height?: Number
+  height?: Number,
+  title?: String
 }
 
 export interface TagsInterface {

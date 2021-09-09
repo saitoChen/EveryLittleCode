@@ -8,7 +8,6 @@ import Footer from '../../components/Footer'
 import { TagsInterface  } from '../../interface'
 import { useRouter } from 'next/router'
 import { BreadcrumbItemInterface } from '../../interface'
-import DarkContentBg from '../../components/DarkContentBg'
 interface Props {
   info: any
 }
@@ -43,14 +42,12 @@ const NotesWithTag = ({ info }: Props) => {
         <title>✌Every Little Code</title>
       </Head>
       <div className="flex flex-col min-h-screen ">
-        <Header path={Breadcrumb} height={56} />
-        <NotesNav title={tag_name} />
-        <div className="flex flex-col mb-18 flex-1 sm:flex-row sm:justify-between sm:items-start sm:mt-28 sm:px-12 lg:w-1024px lg:mx-auto lg:items-start">
+        <Header path={Breadcrumb} height={56} title={tag_name} />
+        <div className="flex flex-col mb-12 flex-1 dark:bg-dblock sm:flex-row sm:justify-between sm:items-start sm:pt-12 sm:px-12 lg:w-1024px lg:mx-auto lg:items-start">
           {
             tags.length > 0 && <div className="px-6 sm:order-last"><Tags tags={tags} handleTag={handleTag} /></div>
           }
           <div className="px-6 mt-6 sm:mt-0"><NotesList articles={articles}  handleArticle={handleArticle(tag_name)} /></div>
-          <DarkContentBg />
         </div>
         <Footer />
       </div>

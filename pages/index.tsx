@@ -8,8 +8,10 @@ const Home: NextPage = () => {
       <Head>
         <title>✌Every Little Code</title>
       </Head>
-      <Header path="/ home" />
-      <Content />
+      <Header path="/ home" height={56} />
+      <div className="flex justify-center -mt-32">
+        <Content />
+      </div>
     </div>
   )
 }

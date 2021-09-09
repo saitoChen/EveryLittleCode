@@ -4,7 +4,8 @@ import Twitter from './Icons/Twitter'
 import Breadcrumb from '../components/Breadcrumb/index'
 import { MoonIcon, SunIcon } from '@heroicons/react/solid'
 import { HeaderInterface } from '../interface/index'
-const Header = ({ path='/ home', height=72 }: HeaderInterface) => {
+import NotesNav from '../components/Notes/Nav'
+const Header = ({ path='/ home', height=72, title='' }: HeaderInterface) => {
 
   const [ darkModeOn, setDarkMode ] = useState(false)
 
@@ -19,7 +20,7 @@ const Header = ({ path='/ home', height=72 }: HeaderInterface) => {
   }
 
   return (
-    <React.Fragment>
+    <div className="h-56">
       <div className={`w-100% h-${height} bg-block absolute top-0 -z-1 dark:bg-dbnewblock`}></div>
       <div className="flex flex-col font-mono text-base items-center mt-4 sm:flex-row sm:justify-between sm:px-4 lg:w-1024px lg:mx-auto">
         <div className="flex w-200px cursor-pointer fill-current justify-evenly text-highlight dark:text-grey sm:order-last">
@@ -31,7 +32,8 @@ const Header = ({ path='/ home', height=72 }: HeaderInterface) => {
         </div>
         <Breadcrumb path={path} />
       </div>
-    </React.Fragment>
+      <NotesNav title={title} />
+    </div>
   )
 
 }

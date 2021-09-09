@@ -1,6 +1,5 @@
 import Header from '../components/Header'
 import Head from 'next/head'
-import NotesNav from '../components/Notes/Nav'
 import Tags from '../components/Tags'
 import NotesList from '../components/Notes/NotesList'
 import Footer from '../components/Footer'
@@ -31,14 +30,12 @@ const Notes = ({ articles, tags }: Props) => {
         <title>✌Every Little Code</title>
       </Head>
       <div className="flex flex-col min-h-screen">
-        <Header path='/ notes' height={56} />
-        <NotesNav />
-        <div className="flex flex-col mb-18 flex-1 sm:flex-row sm:justify-between sm:items-start sm:mt-28 sm:px-12 lg:w-1024px lg:mx-auto lg:items-start">
+        <Header path='/ notes' height={56} title={'ALL PUBLISHED'} />
+        <div className="flex flex-col h-full mb-12 flex-1 dark:bg-dblock sm:flex-row sm:justify-between sm:items-start sm:pt-12 sm:px-12 lg:w-1024px lg:mx-auto lg:items-start">
           {
             tags.length > 0 && <div className="px-6 sm:order-last"><Tags tags={tags} handleTag={handleTag} /></div>
           }
           <div className="px-6 mt-6 sm:mt-0"><NotesList articles={articles} handleArticle={handleArticle} /></div>
-          <DarkContentBg />
         </div>
         <Footer />
       </div>
@@ -56,7 +53,7 @@ export async function getServerSideProps(context:any) {
     const tags_list = await excuteQuery(tags_query)
     articles = JSON.parse(JSON.stringify(articles_list))
     tags = JSON.parse(JSON.stringify(tags_list))
-  } catch (err) {
+  } catch (err:any) {
     throw new Error(err)
   }
   return {

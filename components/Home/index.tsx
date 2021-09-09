@@ -7,7 +7,7 @@ const HomeContaniner: NextComponentType = () => {
 
   return (
     <div className="flex flex-col items-center select-none text-base font-mono">
-      <div className="mt-24 text-3xl font-mono dark:text-dbase">Every Little Code</div>
+      <div className="mt-12 text-3xl font-mono dark:text-dbase">Every Little Code</div>
       <div className="mt-12">
         <Image src={"/avator.jpg"} className="rounded-full" width={180} height={180} alt="avator" />
       </div>
