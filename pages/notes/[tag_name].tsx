@@ -41,9 +41,11 @@ const NotesWithTag = ({ info }: Props) => {
       <Head>
         <title>✌Every Little Code</title>
       </Head>
-      <div className="flex flex-col min-h-screen ">
-        <Header path={Breadcrumb} height={56} title={tag_name} />
-        <div className="flex flex-col mb-12 flex-1 dark:bg-dblock sm:flex-row sm:justify-between sm:items-start sm:pt-12 sm:px-12 lg:w-1024px lg:mx-auto lg:items-start">
+      <div className="flex flex-col min-h-screen dark:bg-dblock">
+        <div className="dark:bg-dbnewblock">
+          <Header path={Breadcrumb} height={56} title={'ALL PUBLISHED'} />
+        </div>
+        <div className="flex flex-col pb-12 flex-1 dark:bg-dblock sm:flex-row sm:justify-between sm:items-start sm:pt-12 sm:px-12 lg:w-1024px lg:mx-auto lg:items-start">
           {
             tags.length > 0 && <div className="px-6 sm:order-last"><Tags tags={tags} handleTag={handleTag} /></div>
           }
