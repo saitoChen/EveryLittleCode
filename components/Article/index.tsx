@@ -1,6 +1,5 @@
 import { ArticleInterface } from '../../interface/index'
 import { format } from '../../lib/time'
-import DarkContentBg from '../../components/DarkContentBg'
 import dynamic from 'next/dynamic';
 import '@uiw/react-markdown-preview/markdown.css';
 
@@ -22,7 +21,6 @@ const Article = ({ article }: Props) => {
       <div className="mt-8 overflow-auto dark:text-dbase sm:px-12 lg:w-1024px lg:mx-auto">
         <MarkdownPreview source={article.content} />
       </div>
-      <DarkContentBg />
     </div>
   )
 }

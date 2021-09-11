@@ -70,7 +70,8 @@ export async function getStaticProps(context:any) {
         id,
         tag_name
       }
-    }
+    },
+    revalidate: 10,
   }
 }
 

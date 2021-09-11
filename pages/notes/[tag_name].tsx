@@ -67,7 +67,7 @@ export async function getStaticPaths() {
         params: {
           tag_id: tag.id,
           tag_name: tag.name
-        }
+        },
       }
     })
   }
@@ -86,7 +86,8 @@ export async function getStaticProps(context:any) {
         tag_name,
         tags
       }
-    }
+    },
+    revalidate: 10,
   }
 }
 

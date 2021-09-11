@@ -6,7 +6,6 @@ import Footer from '../components/Footer'
 import excuteQuery from '../lib/db'
 import { ArticleInterface, TagsInterface } from '../interface/index'
 import { useRouter } from 'next/router'
-import DarkContentBg from '../components/DarkContentBg'
 interface Props {
   articles: ArticleInterface[]
   tags: TagsInterface[]
@@ -43,7 +42,7 @@ const Notes = ({ articles, tags }: Props) => {
   )
 }
 
-export async function getServerSideProps(context:any) {
+export async function getStaticProps(context:any) {
   const article_query:string = 'SELECT article_id, createdAt, author, title, description From articles_list;'
   const tags_query:string = 'SELECT id, name From articles_tags;'
   let articles:ArticleInterface[] = []
@@ -60,7 +59,8 @@ export async function getServerSideProps(context:any) {
     props: {
       articles,
       tags
-    }
+    },
+    revalidate: 10,
   }
 }
 
