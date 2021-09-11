@@ -36,7 +36,7 @@ const NotesItem = ( { info }:Props ) => {
       </Head>
       <div className="flex flex-col pb-12 min-h-screen font-mono text-base dark:bg-dblock">
         <div className="dark:bg-dbnewblock">
-          <Header path='/ notes' height={56} title={'ALL PUBLISHED'} />
+          <Header path={Breadcrumb} height={56} title={'ALL PUBLISHED'} />
         </div>
         <div className="flex-1"><Article article={article} /></div>
         <Footer />
