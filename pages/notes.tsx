@@ -45,7 +45,7 @@ const Notes = ({ articles, tags }: Props) => {
 }
 
 export async function getStaticProps(context:any) {
-  const article_query:string = 'SELECT article_id, createdAt, author, title, description From articles_list;'
+  const article_query:string = 'SELECT article_id, createdAt, author, title, description From articles_list ORDER BY createdAt DESC;'
   const tags_query:string = 'SELECT id, name From articles_tags;'
   let articles:ArticleInterface[] = []
   let tags: TagsInterface[] = []

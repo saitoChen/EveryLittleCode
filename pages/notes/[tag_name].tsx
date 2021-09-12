@@ -77,7 +77,7 @@ export async function getStaticPaths() {
 
 export async function getStaticProps(context:any) {
   const { tag_name } = context.params
-  const SQL = `SELECT a.article_id, createdAt, author, title, description FROM articles_list a JOIN article_list_tag b ON a.article_id = b.article_id JOIN articles_tags c ON c.name = b.tag_key WHERE b.tag_key="${tag_name}";`
+  const SQL = `SELECT a.article_id, createdAt, author, title, description FROM articles_list a JOIN article_list_tag b ON a.article_id = b.article_id JOIN articles_tags c ON c.name = b.tag_key WHERE b.tag_key="${tag_name}" ORDER BY createdAt DESC;`
   const tags_query:string = 'SELECT id, name From articles_tags;'
   const articles = JSON.parse(JSON.stringify(await excuteQuery(SQL)))
   const tags:TagsInterface[] = JSON.parse(JSON.stringify(await excuteQuery(tags_query)))
