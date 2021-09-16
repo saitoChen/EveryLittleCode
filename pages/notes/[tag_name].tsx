@@ -43,7 +43,7 @@ const NotesWithTag = ({ info }: Props) => {
       </Head>
       <div className="flex flex-col min-h-screen dark:bg-dblock">
         <div className="dark:bg-dbnewblock">
-          <Header path={Breadcrumb} height={56} title={'ALL PUBLISHED'} />
+          <Header path={Breadcrumb} height={56} title={tag_name} />
         </div>
         <div className="flex flex-col pb-12 flex-1 dark:bg-dblock sm:flex-row sm:justify-between sm:items-start sm:pt-12 sm:px-12 lg:w-1024px lg:mx-auto lg:items-start">
           {
