@@ -34,11 +34,11 @@ const NotesItem = ( { info }:Props ) => {
       <Head>
         <title>✌Every Little Code</title>
       </Head>
-      <div className="flex flex-col pb-12 min-h-screen font-mono text-base dark:bg-dblock">
+      <div className="flex flex-col min-h-screen font-mono text-base dark:bg-dblock">
         <div className="dark:bg-dbnewblock">
           <Header path={Breadcrumb} height={56} title={article.title} />
         </div>
-        <div className="flex-1"><Article article={article} /></div>
+        <div className="flex-1 pb-12"><Article article={article} /></div>
         <Footer />
       </div>
     </div>
