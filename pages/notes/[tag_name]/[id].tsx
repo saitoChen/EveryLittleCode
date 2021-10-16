@@ -25,7 +25,7 @@ const NotesItem = ( { info }:Props ) => {
     },
     {
       path: `/${id}`,
-      name: `${article.title}`
+      name: `${id}`
     }
   ]
 
