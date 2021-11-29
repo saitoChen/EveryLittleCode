@@ -28,7 +28,7 @@ const Notes = ({ articles, tags }: Props) => {
       <Head>
         <title>✌Every Little Code</title>
       </Head>
-      <div className="flex flex-col min-h-screen dark:bg-dblock">
+      <div className="flex flex-col min-h-screen dark:bg-dblock ">
         <div className="dark:bg-dbnewblock">
           <Header path='/ notes' height={56} title={'ALL PUBLISHED'} />
         </div>

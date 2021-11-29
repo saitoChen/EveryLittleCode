@@ -10,7 +10,7 @@ const MarkdownPreview = dynamic(
 const Article = ({ article }) => {
 
   return (
-    <div className="px-4">
+    <div className="font-sans px-4">
       <div className="flex flex-col items-center text-sm text-grey sm:flex-row sm:items-start sm: justify-center sm:text-lg">
         <div className="mt-2 sm:mt-8">{format(article.createdAt)}</div>
       </div>
