@@ -1,6 +1,6 @@
 import Header from '../../../components/Header'
 import Head from 'next/head'
-import excuteQuery from '../../../lib/db'
+import excuteQuery from '../../../libs/db'
 import { ArticleInterface, TagsInterface } from '../../../interface/index'
 import Article from '../../../components/Article/index'
 import Footer from '../../../components/Footer'

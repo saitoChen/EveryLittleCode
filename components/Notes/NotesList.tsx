@@ -1,5 +1,5 @@
 import { ArticleInterface } from "../../interface"
-import { format } from "../../lib/time"
+import { format } from "../../libs/time"
 interface Props {
   articles: ArticleInterface[]
   handleArticle: Function

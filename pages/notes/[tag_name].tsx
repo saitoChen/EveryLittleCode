@@ -1,6 +1,6 @@
 import Header from '../../components/Header'
 import Head from 'next/head'
-import excuteQuery from '../../lib/db'
+import excuteQuery from '../../libs/db'
 import NotesNav from '../../components/Notes/Nav'
 import Tags from '../../components/Tags'
 import NotesList from '../../components/Notes/NotesList'

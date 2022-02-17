@@ -3,7 +3,7 @@ import Head from 'next/head'
 import Tags from '../components/Tags'
 import NotesList from '../components/Notes/NotesList'
 import Footer from '../components/Footer'
-import excuteQuery from '../lib/db'
+import excuteQuery from '../libs/db'
 import { ArticleInterface, TagsInterface } from '../interface/index'
 import { useRouter } from 'next/router'
 interface Props {

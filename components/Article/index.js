@@ -1,5 +1,4 @@
-import { ArticleInterface } from '../../interface/index'
-import { format } from '../../lib/time'
+import { format } from '../../libs/time'
 import dynamic from 'next/dynamic';
 import '@uiw/react-markdown-preview/markdown.css';
 
