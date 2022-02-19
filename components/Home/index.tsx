@@ -16,10 +16,20 @@ const HomeContaniner: NextComponentType = () => {
         {/* eslint-disable-next-line react/no-unescaped-entities */}
         <p className="mt-2 dark:text-dbase">I'M Jeff</p>
         <p className="mt-2 dark:text-dbase">Software Engineer in China</p>
-        <ul className="mt-12">
+        <ul className="mt-8">
           <li>
             <Link href="/notes">
               <a className="text-highlight underline dark:text-dbase dark:hover:text-highlight">Notes/文章</a>
+            </Link>
+          </li>
+          <li>
+            <Link href="https://marketplace.visualstudio.com/search?term=create-easy&target=VSCode&category=All%20categories&sortBy=Relevance">
+              <a className="text-highlight underline dark:text-dbase dark:hover:text-highlight">Create-Easy/vscode extension</a>
+            </Link>
+          </li>
+          <li>
+            <Link href="https://github.com/saitoChen/vue-awesome-textarea">
+              <a className="text-highlight underline dark:text-dbase dark:hover:text-highlight">Vue-awesome-textarea/a component for Vue2.x</a>
             </Link>
           </li>
         </ul>
