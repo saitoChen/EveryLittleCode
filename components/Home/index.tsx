@@ -23,6 +23,11 @@ const HomeContaniner: NextComponentType = () => {
             </Link>
           </li>
           <li>
+            <Link href="https://juejin.cn/user/1046390798826654">
+              <a className="text-highlight underline dark:text-dbase dark:hover:text-highlight">juejin/掘金</a>
+            </Link>
+          </li>
+          <li>
             <Link href="https://marketplace.visualstudio.com/search?term=create-easy&target=VSCode&category=All%20categories&sortBy=Relevance">
               <a className="text-highlight underline dark:text-dbase dark:hover:text-highlight">Create-Easy/vscode extension</a>
             </Link>
